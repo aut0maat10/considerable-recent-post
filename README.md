@@ -16,4 +16,4 @@ NOTE: The image is hardcoded into the HTML.
 
 ### Mobile ###
 
-![picture alt](https://i.imgur.com/HbGnWH5.png "Mobile")
+![picture alt](https://i.imgur.com/ancewZf.png "Mobile")

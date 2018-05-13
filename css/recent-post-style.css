@@ -85,6 +85,7 @@
 @media only screen and (max-width: 727px)  {
 
   .card-image { 
+    object-fit: cover;
     width: 100px;
     height: 100px;
     margin-right: 15px; 

@@ -12,7 +12,7 @@ NOTE: The image is hardcoded into the HTML.
 
 ### Full Screen ###
 
-![picture alt](https://i.imgur.com/HbGnWH5.png "Full Screen")
+![picture alt](https://i.imgur.com/cxDd1xR.png "Full Screen")
 
 ### Mobile ###
 

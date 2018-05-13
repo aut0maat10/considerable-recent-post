@@ -8,11 +8,11 @@ NOTE: The image is hardcoded into the HTML.
 
 ### Post Page ###
 
-![picture alt](https://i.imgur.com/u4K5V11.png "Post Page")
+![picture alt](https://i.imgur.com/uufmYJ3.png "Post Page")
 
 ### Full Screen ###
 
-![picture alt](https://i.imgur.com/cxDd1xR.png "Full Screen")
+![picture alt](https://i.imgur.com/1D2uCYO.png "Full Screen")
 
 ### Mobile ###
 

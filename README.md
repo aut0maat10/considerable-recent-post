@@ -2,8 +2,6 @@
 
 A Wordpress plugin to grab the most recent post and display its details in a "recent post" box at the end of every post.
 
-NOTE: The image is hardcoded into the HTML. 
-
 ## Screenshots: ##
 
 ### Post Page ###

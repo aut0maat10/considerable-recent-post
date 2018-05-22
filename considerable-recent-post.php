@@ -58,7 +58,7 @@ if (is_single()) {
 }
 add_filter( "the_content", "after_post_content" );
 
-?>
+
 
 
 

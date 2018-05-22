@@ -17,27 +17,33 @@ function load_plugin_css() {
 add_action( 'wp_enqueue_scripts', 'load_plugin_css', 9999 );
 
 // get most recent post
-function recent_post() {
-  $args = array( 'numberposts' => '1', 'category' => CAT_ID );
+function con_recent_post() {
+  $args = array( 'numberposts' => '1');
   $recent_posts = wp_get_recent_posts( $args );
     foreach( $recent_posts as $recent ){
-      $image = 'https://i.imgur.com/fniSFQ0.jpg'; // image is hardcoded
+      $image = wp_get_attachment_url(get_post_thumbnail_id($recent['ID']));
       $author = get_the_author_link();
       $categories = get_the_category($recent["ID"]);
       $timestamp = human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
 
       return 
       '<div class="card-container">
-        <img class="card-image" src="'. $image .'">' . 
-        '<div class="card-text">
+        <div class="img-container">
+          <img class="card-image" src="'. $image .'">' . 
+        '</div>
+        <div class="card-text">
           <div class="category-wrapper">
             <h4 class="card-category">' . $categories[0]->name . '</h4>
-            <h4 class="mobile-show">' .'  | ' . $timestamp .'</h4>
+            <div class="mobile-show">
+              <h4 class="mobile-timestamp">' .'  | ' . $timestamp .'</h4>
+            </div>
           </div>' . 
-        '<h1 class="post-title">
-          <a href="' . get_permalink($recent["ID"]) . '">' . ( __($recent["post_title"])) . '</a>
-        </h1>
-          <div id="byline">By <p id="author">' . $author . '</p>' . ' ' . '<p id="timestamp">' . $timestamp . '</p></div>
+          '<h2 class="post-title">
+            <a href="' . get_permalink($recent["ID"]) . '">' . $recent["post_title"] . '</a>
+          </h2>
+          <div class="byline">
+            By <p class="author">' . $author . '</p>' . ' ' . '<p class="timestamp">' . $timestamp . '</p>
+          </div>
         </div>
       </div>';
     }
@@ -46,7 +52,7 @@ function recent_post() {
 // place recent post box after post content 
 function after_post_content($content){
 if (is_single()) {	
-  $content .= recent_post();
+  $content .= con_recent_post();
 }
 	return $content;
 }
